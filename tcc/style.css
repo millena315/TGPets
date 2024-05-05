@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --red: #d63a25;
+    --white: #fff;
+    --dark: #1e1c2a;
+    --greendark: #38a269;
+    --green: #90d1ae;
+    --p: #343334;
+
+}
+
+body{
+    //color: var(--dark);
+    //background: var(--white);
+    
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--green);
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 1000;
+    top: 0
+}
+
+.navigation .logo {
+    color: var(--greendark);
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: flex; /* Adicionado para alinhar os elementos horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px; /* Adicionado para espaçamento entre a logo e o texto */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.logo h3{
+    color: var(--p);
+}
+
+.navigation ul{
+    display:flex;
+    align-items:center;
+    gap:5rem;
+}
+
+.navigation ul li a{
+    color: var(--p);
+    font-size: 17px:
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navigation ul li a:hover{
+    color: var(--greendark);
+
+}
+
+.login-btn{
+    padding: 15px 45px;
+    background: var(--greendark);
+    color: var(--white);
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.login-btn:hover{
+    background: var(--green);
+    transition: 1s;
+}
+
+.menu{
+    cursor: pointer;
+    display:none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition:all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3);{
+    background: var(--greendark);
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text{
+    max-width: 37rem;
+}
+
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: var(--greendark);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.home-text .text-h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 4rem:
+}
+
+.home-text p{
+    margin-bottom: 4rem;
+}
+
+.home-btn{
+    padding: 15px 45px;
+    background: var(--greendark);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.home-btn :hover{
+    background: #fc4c35;
+}
+
+.home-img img{
+    width:100%;
+}
+
+@media (max-width:785px){
+    .navigation{
+        padding:18px 20px;
+    }
+    .menu{
+        display: block;
+
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+
+    .animal-detalhes{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .detalhes-info h2{
+        font-size: 15px;
+    }
+    .detalhes-info h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .detalhes-info p{
+        font-size: 15px;
+    }
+    .adotar-img{
+        width: 125%;
+    }
+}
+
+//Visualização dos animais
+/*.animais{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}*/
+
+.cols{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 1rem 1rem;
+}
+
+.cols-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+}
+
+.cols-4 img{
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.cols>div{
+    cursor:pointer;
+    transition: all 0.2s;
+}
+ 
+.cols>*:hover{
+    transform: translateY(-5px);
+}
+
+.animais-title{
+    text-align: center;
+    //margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--p);
+    //margin-bottom: 4rem;
+    
+}
+
+/*.pag-animais{
+    max-width: 1280px;
+    margin: 0auto;
+}*/
+
+/*.animal{
+    width: 80%;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    //display: flex;
+    flex-direction: column;
+    text-align: center
+    
+}*/
+
+.animal span{
+    margin-bottom: 1rem;
+}
+
+.detalhes-btn{
+    padding: 10px 60px;
+    background: var(--greendark);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+    border: none;
+    margin-top: 0.3rem;
+}
+
+.detalhes-btn>div{
+    cursor:pointer;
+    transition: all 0.5s;
+}
+
+.detalhes-btn :hover{
+    background: var(--green);
+}
+
+//Formulário de interesse
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+  
+  .modal-content {
+    background: var(--green);
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .modal h1{
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .linha{
+    width:160px;
+    height: 5px;
+    background: var(--greendark);
+    border-radius: 9999px;
+    margin: 8px auto 0 auto;
+    margin-bottom: 1rem;
+  }
+
+ .info-model{
+    text-align: center;
+    color: var(--dark);
+ }
+
+ .enviar-btn{
+    padding: 10px 200px;
+    margin-top: 1.2rem;
+    background-color: var(--greendark);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+ }
+
+ .enviar-btn :hover{
+    background: #fc4c35;
+ }
+
+ .input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0.2rem 5;
+ }
+
+ .campo input{
+    border-radius: 5px;
+    margin: 0.6rem 0;
+    border: none;
+    padding:0.8rem 2rem;
+    box-shadow: 1px 1px 6px #0000001c;
+ }
+
+ .campo{
+    display:flex;
+    flex-direction: column;
+    //margin-bottom: 0.5rem;
+
+ }
+
+ .campo input:hover{
+    background-color: #eeeeee75;
+ }
+
+ .campo input:focus-visible{
+    outline: 1px solid #6c63ff;
+ }
+
+ .campo input::placeholder{
+    color: gray;
+ }
+
+
+ .foto-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+ }
+
+ .foto-form img{
+    width:31rem;
+ }
+
+ .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+ }
+
+ @media screen and (max-wid: 1330px) {
+    .form-image{
+        display:none;
+    }
+
+    .container{
+        width: 50;
+    }
+
+    .form{
+        width: 100%;
+    }
+ }
+
+//Sobre nós
+section.main{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/lasertag.com/wp-content/uploads/2020/12/14021638/hero-bg.jpg');
+    padding: 30px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; /*esse que cria aquele efeito de descer a imagem*/
+}
+
+
+
+
+footer{
+    background-color: var(--green);
+    margin-top: 2rem;
+    padding: 20px 0;
+    border-top: 1px solid rgb(200, 200, 200);
+    font-size: 14px;
+}
+
+.rodape{
+    color: var(--dark);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.rodape-dupla{
+    color: var(--greendark);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.rodape-dupla .fatec{
+    font-style: italic;
+}
+
+
+
+
+
+///
+
+/* Estilos para a seção de animais */
+.animais {
+    background-color: dark; /* Cor de fundo para a seção dos animais */
+    padding: 50px 0; /* Adiciona um espaçamento interno à seção */
+}
+
+.animais-container {
+    max-width: 900px; /* Define a largura máxima para o conteúdo dos animais */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Alinha o conteúdo ao centro */
+}
+
+.animais-title{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 35px;
+    color: var(--p);
+    margin-bottom: 2rem;
+    
+    
+}
+
+/* Estilos para os cartões de animais */
+.animal {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px; /* Adiciona uma margem à direita para separar os cartões */
+    margin-bottom: 10px; /* Adiciona uma margem inferior para separar os cartões */
+    width: calc(40% - 120px); /* Define a largura de cada cartão com a margem à direita subtraída */
+    display: inline-block; /* Faz os cartões de animais exibirem como blocos em linha */
+    vertical-align: top; /* Alinha os cartões de animais ao topo do contêiner */
+    height: 420px; /* Define uma altura fixa para todos os cartões */
+    overflow: hidden; /* Oculta qualquer conteúdo que extrapolar a altura definida */
+    background-color: white;
+    text-align: center;
+}
+
+.animal img {
+    width: 100%;
+    height: 190px; /* Define uma altura fixa para as imagens */
+    object-fit: cover; /* Faz com que a imagem preencha completamente o espaço, mantendo a proporção e cortando se necessário */
+    border-radius: 5px;
+}
+
+.animal p {
+    margin: 5px 0;
+    margin-bottom: 2px;
+}
+
+.animal-name{
+    font-size: 1.3rem;
+    color: var(--dark);
+    //margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    //margin-top: 0.5rem;
+}
+
+.detalhes-btn:hover{
+    background: var(--green);
+    transition: 1s;
+}
+ 
+.animal:hover {
+    transform: translateY(-5px); /* Move o card para cima quando o mouse passa por cima */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.descricao {
+    color: gray;
+    font-size: 19px;
+    margin: 10px 0;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+
+/* Estilos para a seção "Sobre Nós" */
+.sobre-nos {
+    position: relative; /* Define um contexto de posicionamento para a imagem de fundo */
+    height: 60vh; /* Defina a altura da seção para cobrir a tela inteira */
+    background-image: url('https://img.freepik.com/fotos-gratis/mulher-brincando-com-caes-de-resgate-em-abrigo_23-2148682984.jpg?t=st=1711251639~exp=1711255239~hmac=834f07b7eb0fbbec8c02a635b03a87c8d4e2209abbbe77de8c0b76c6d295e0f7&w=826'); /* Substitua 'sobre-nos-background.jpg' pelo caminho da sua imagem de fundo */
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem na seção */
+    background-attachment: fixed;
+}
+
+/* Estilos para o conteúdo da seção "Sobre Nós" */
+.sobre-info {
+    position: absolute; /* Posiciona o conteúdo de forma absoluta dentro da seção */
+    top: 50%; /* Posiciona o conteúdo a 50% da altura da seção */
+    left: 50%; /* Posiciona o conteúdo a 50% da largura da seção */
+    transform: translate(-50%, -50%); /* Move o conteúdo para o centro */
+    text-align: center; /* Alinha o texto ao centro */
+    color: #fff; /* Cor do texto */
+    padding: 20px; /* Adiciona um espaçamento interno */
+}
+
+/* Estilos para o texto */
+.sobre-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    //color: var(--dark);
+}
+
+.sobre-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.animal-detalhes{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.detalhes-info{
+    max-width: 37rem;
+}
+
+.detalhes-info h2{
+    font-size: 1.5rem;
+    color: var(--greendark);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.detalhes-info h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 4rem:
+}
+
+.detalhes-info p{
+    margin-bottom: 2rem;
+}
+
+.adotar-btn{
+    padding: 15px 45px;
+    background: var(--greendark);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+    margin-top: 2rem;
+}
+
+.adotar-btn :hover{
+    background: var(--green);
+    transition: 1s;
+}
+
+.adotar-img img{
+    width:80%;
+}
+
+.filtro{
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-bottom: 25px;
+    padding: 5px;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+#filtroGenero {
+    padding: 10px; /* Adiciona preenchimento ao seletor */
+    font-size: 13px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: none;
+    width: 100px; /* Largura do seletor */
+    height: 38px;
+    color: var(--p);
+    background-color: var(--green); /* Cor de fundo */
+}
+
+#filtroIdade {
+    padding: 10px; /* Adiciona preenchimento ao seletor */
+    font-size: 13px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: none; /* Borda cinza */
+    width: 100px; /* Largura do seletor */
+    height: 38px;
+    color: var(--p);
+    background-color: var(--green); /* Cor de fundo */
+}

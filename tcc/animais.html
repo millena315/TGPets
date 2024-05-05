@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Conheça os Animais</title>
+</head>
+<body>
+    <header>
+        <header>
+            <nav class="navigation">
+                <a href="#" class="logo">
+                    <img class="img-logo" src="images/logoideas.png">
+                    <h3>Nome Nome</h3>
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Inicio</a></li>
+                    <li class="nav-item"><a href="#">Sobre</a></li>
+                    <li class="nav-item"><a href="#">Contato</a></li>
+                    <li class="nav-item"><button class="login-btn">Login</button></li>
+                </ul>
+                <div class="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+    
+
+       <!-- Detalhes do pet -->
+        <section class="animal-detalhes">
+            <div class="adotar-img">
+                <img src="images/gatinhosilly.png" alt="">
+            </div>
+            <div class="detalhes-info">
+                <h2 id="animal-name"> Nome: </h2>
+                <p id="animal-gender"> Gênero: </p>
+                <p id="animal-age"> Idade: </p>
+                <p id="animal-raca">Raça: </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ipsam assumenda officiis totam cum non ratione animi ipsum a tempore sed saepe, repellendus expedita repellat eligendi vel, sunt quas nostrum.
+                </p>
+                
+                <a class="adotar-btn" href="#">Quero adotar</a>
+
+            </div>
+        </section>
+
+
+        <!-- Formulário de Cadastro -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="foto-forms">
+                    <img class="foto-form" src="images/gatinhosilly.png" alt="ele é silly">
+                </div>    
+                <form> 
+                    <span class="close">&times;</span>
+                    <div class="form">
+                        <h1>Cadastre-se</h1>
+                        <div class="linha"></div>              
+                        <h4 class="info-model">Ficamos felizes pelo seu interesse na adoção! <br> Para dar continuidade, pedimos que preencha os campos a seguir:</h4>
+                        <br>
+                        <div class="input-group">
+                            <div class="campo">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" placeholder="Digite seu nome..." required>
+                            </div>
+                            <div class="campo">
+                                <label for="idade">Idade:</label>
+                                <input type="number" id="idade" name="idade" placeholder="Digite sua idade..." required><br>
+                            </div>
+                            <div class="campo">
+                                <label for="tel">Telefone:</label>
+                                <input type="tel" id="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                            </div>
+                            <div class="campo">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required><br>
+                            </div>
+                            <div class="campo">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade..." required>
+                            </div>
+                            <div class="campo">
+                                <label for="name">Endereço:</label>
+                                <input type="text" id="end" name="endereço" placeholder="Digite seu endereço..." required><br>
+                            </div>
+                        </div>
+                        <button class="enviar-btn" type="submit">Concluir Cadastro</button>
+                    </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <footer>
+            <div class="rodape">
+                <h3>2024.Dolor recusandae maxime corporis ratione natus quam minima quia excepturi saepe nihil error voluptatem ad.</h3>
+            </div>
+            <div class="rodape-dupla">
+                <p>Igor Ribeiro de Sousa e Millena Albuquerque de Almeida</p>
+                <p class="fatec">FATEC de Guarulhos - Análise e Desenvolvimento de Sistemas</p>
+            </div>
+        </footer>
+
+
+
+        <script src="script.js"></script>
+    
+</body>
+</html>

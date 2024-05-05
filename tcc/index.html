@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16"  href="images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+<!-- jQuery (obrigatório para o Slick Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- CSS do Slick Carousel (escolha um dos estilos) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+
+<!-- JavaScript do Slick Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Nome</title>
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo">
+                <img class="img-logo" src="images/logoideas.png">
+                <h3>Nome Nome</h3>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#">Inicio</a></li>
+                <li class="nav-item"><a href="#">Sobre</a></li>
+                <li class="nav-item"><a href="#">Contato</a></li>
+                <li class="nav-item"><button class="login-btn">Login</button></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Home-->
+        <section class="home">
+            <div class="home-text">
+                <h4 class="text-h4">um texto uma frase</h4>
+                <h1 class="text-h1">mais um texto aqui e tal</h1>
+                <p>muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                muchotextomuchotextomuchotextomuchotextomuchotexto
+                </p>
+                <a class="home-btn" href="animais.html">Conheça os Animais!</a>
+            </div>
+            <div class="home-img">
+                <img src="images\gatinhosilly2.png" alt="gatinho silly">
+            </div>
+        </section>
+        
+        <!--Sobre Nós-->
+        <section class="sobre-nos">
+            <div class="sobre-info">
+                <h1 class="sobre">Nossa Missão</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo, felis ut sollicitudin luctus, sapien ex ultricies justo, vitae cursus arcu libero nec enim.</p>
+            </div>
+        </section>
+
+        
+        
+
+            <!--Conheça os animais-->
+            <section id="animais" class="animais">
+                <div class="animais-container">
+                    <h2 class="animais-title">Conheça os animais!</h2>
+                    <p class="descricao">pipipipi popopo</p>
+                    <div class="filtro">
+                        <label for="filtroGenero">Filtrar por:</label>
+                        <br>
+                        <br>
+                        <label for="filtroGenero">Gênero:</label>
+                        <select id="filtroGenero">
+                            <option value="todos">Todos</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Femea">Fêmea</option>
+                        </select>
+
+                        <label for="filtroIdade">Idade:</label>
+                        <select id="filtroIdade">
+                            <option value="todos">Todas</option>
+                            <option value="Filhote">Até 1 ano</option>
+                            <option value="DoisaCinco">2 a 5 anos</option>
+                            <option value="MaisdeCinco">Mais de 5 anos</option>
+                        </select>
+
+                        <label for="filtroOng">ONG:</label>
+                        <select id="filtroIdade">
+                            <option value="todos">Todas</option>
+                            <option value="Filhote">Resgate Amor</option>
+                            <option value="DoisaCinco">Casa dos Bigodes</option>
+                            <option value="MaisdeCinco">MiAuDote</option>
+                        </select>
+                    </div>
+                    <div id="animal-list"></div>
+                </div>
+            </section>
+
+            
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="foto-forms">
+                        <img class="foto-form" src="images/gatinhosilly.png" alt="ele é silly">
+                    </div>    
+                    <form> 
+                        <span class="close">&times;</span>
+                        <div class="form">
+                            <h1>Cadastre-se</h1>
+                            <div class="linha"></div>              
+                            <h4 class="info-model">Ficamos felizes pelo seu interesse na adoção! <br> Para dar continuidade, pedimos que preencha os campos a seguir:</h4>
+                            <br>
+                            <div class="input-group">
+                                <div class="campo">
+                                    <label for="name">Nome:</label>
+                                    <input type="text" id="name" name="name" placeholder="Digite seu nome..." required>
+                                </div>
+                                <div class="campo">
+                                    <label for="idade">Idade:</label>
+                                    <input type="number" id="idade" name="idade" placeholder="Digite sua idade..." required><br>
+                                </div>
+                                <div class="campo">
+                                    <label for="tel">Telefone:</label>
+                                    <input type="tel" id="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required><br>
+                                </div>
+                                <div class="campo">
+                                    <label for="cidade">Cidade:</label>
+                                    <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade..." required>
+                                </div>
+                                <div class="campo">
+                                    <label for="name">Endereço:</label>
+                                    <input type="text" id="end" name="endereço" placeholder="Digite seu endereço..." required><br>
+                                </div>
+                            </div>
+                            <button class="enviar-btn" type="submit">Concluir Cadastro</button>
+                        </div>
+                  </form>
+                </div>
+            </div>
+        
+           
+</main>
+<footer>
+    <div class="rodape">
+        <h3>2024.Dolor recusandae maxime corporis ratione natus quam minima quia excepturi saepe nihil error voluptatem ad.</h3>
+    </div>
+    <div class="rodape-dupla">
+        <p>Igor Ribeiro de Sousa e Millena Albuquerque de Almeida</p>
+        <p class="fatec">FATEC de Guarulhos - Análise e Desenvolvimento de Sistemas</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
